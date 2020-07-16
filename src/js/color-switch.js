@@ -3,7 +3,6 @@ import colors from './colors';
 const refs = {
   startBtn: document.querySelector('button[data-action="start"]'),
   stopBtn: document.querySelector('button[data-action="stop"]'),
-  body: document.querySelector('body'),
 };
 
 let timerId = null;
@@ -18,7 +17,6 @@ if(isActive){
    refs.startBtn.disabled = true; 
 }
   const currentColor = randomIntegerFromInterval(0, this.length);
-  console.log(currentColor);
   refs.body.style.backgroundColor = this[currentColor];
   isActive = true;
 };
